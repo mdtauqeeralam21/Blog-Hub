@@ -1,0 +1,107 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/david-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.add-body{
+    background-image: url("/images/book-open.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.login{
+        width: 380px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 70px;
+        border-radius: 15px ;
+        border: 2px solid red;
+        box-shadow: 10px 10px 10px red;
+
+}
+h2{
+    text-align: center;
+    color: #fcf3f3;
+    text-shadow: 4px 4px rgb(231, 36, 30);
+    font-size: 30px;
+    font-style: italic;
+    font-family:cursive;
+}
+label{
+    color: #08ffd1;
+    font-size: 17px;
+    font-family: cursive;
+}
+#Uname,#Pass{
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    font-family: cursive;
+}
+
+#log{
+    width: 300px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 17px;
+    background-color: rgb(250, 6, 6);
+    color: white;
+    box-shadow: 4px 4px 4px gray;
+    margin-left: 40px;
+    font-size: 20px;
+
+}
+#log:active{
+    background-color: rgb(17, 17, 54);
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+a{
+    float: right;
+    background-color: grey;
+}
+label{
+    color: white;
+}
+/* Blog Page */
+
+#title, #blog-body, #author{
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        padding-left: 8px;
+        font-family: cursive;
+    
+    }
+    #title,#author{
+        height: 45px;
+    }
+
+    #addblog{
+    width: 300px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 17px;
+    background-color: rgb(231, 31, 65);
+    color: white;
+    box-shadow: 4px 4px 4px gray;
+    margin-left: 120px;
+    font-size: 20px;
+    }
+
+    #addblog:active{
+        background-color: darkred;
+    }
+
+    #add-section{
+        width:40%;
+    }
