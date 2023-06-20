@@ -1,0 +1,16 @@
+{
+    "users":[
+        {
+            "userid":"tauqeer@gmail.com",
+            "password":"tauqeer123"
+        },
+        {
+            "userid":"krunal@gmail.com",
+            "password":"krunal123"
+        },
+        {
+            "userid":"yogesh@gmmail.com",
+            "password":"yogesh123"
+        }
+    ]
+}
