@@ -4,6 +4,7 @@ body
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+    margin: 0px;
 }
 .add-body{
     background-image: url("/images/book-open.jpg");
@@ -23,12 +24,14 @@ body
 
 }
 h2{
+    
     text-align: center;
     color: #fcf3f3;
-    text-shadow: 4px 4px rgb(231, 36, 30);
+    text-shadow: 4px 4px rgb(122, 105, 104);
     font-size: 30px;
     font-style: italic;
     font-family:cursive;
+    margin-left: 400px;
 }
 label{
     color: #d0ece5;
@@ -42,6 +45,14 @@ label{
     border-radius: 3px;
     padding-left: 8px;
     font-family: cursive;
+}
+.connect{
+    background-color: rgb(246, 246, 250);
+    color:rgb(24, 23, 23);
+    border-radius: 3px;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px grey ;
 }
 
 #log{
@@ -70,7 +81,7 @@ a{
 } 
  Blog Page */
 
-#title, #blog-body, #author{
+#title, #content{
         width: 100%;
         border: none;
         border-radius: 5px;
@@ -78,7 +89,7 @@ a{
         font-family: cursive;
     
     }
-    #title,#author{
+    #title{
         height: 45px;
     }
 
@@ -101,4 +112,35 @@ a{
 
     #add-section{
         width:40%;
+    }
+
+    /* ================================================================================== */
+    .navbar{
+        background: crimson;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    }
+    .logo{
+        font-size: 35px;
+        font-weight: 600;
+        color: white;
+    }
+    li{
+        list-style: none;
+        display: inline-block;
+    }
+    li a{
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 25px;
+        border-radius: 10px;
+        padding: 5px;
     }

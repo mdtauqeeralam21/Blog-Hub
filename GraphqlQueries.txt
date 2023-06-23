@@ -1,0 +1,73 @@
+query allData{
+  players{
+	fname
+    lname
+    bioMetrics{
+      heightInches
+      weightLbs
+    }
+    careerStats{
+      shotAttempts
+      madeBaskets
+      rebounds
+      assists
+      blocks
+    }
+  }
+========================================================
+query lnamequery{
+  players(lname:"swoop"){
+    playerId
+    fname
+    bioMetrics{
+      heightInches
+      weightLbs
+    }
+  }
+}
+========================================================
+fragment fragname on BaksetballPlayer {
+  fname
+  playerId
+  bioMetrics {
+    heightInches
+  }
+  careerStats {
+    assists
+  }
+}
+
+query name($lastname: String) {
+  players(lname: $lastname) {
+    ...fragname
+  }
+}
+==========================================================
+query onlyHeights{
+  players{
+    fname
+    bioMetrics{
+      heightInches
+      weightLbs
+    }
+  }
+}
+===========================================================
+query onlyStats($input:String){
+  players(lname:$input){
+    playerId
+    fname
+    lname
+  }
+}
+===========================================================
+mutation mname($input:NewPlayerInput!){
+  addPlayer(input:$input){
+    fname
+    lname
+    bioMetrics{
+      heightInches
+      weightLbs
+    }
+}
+}

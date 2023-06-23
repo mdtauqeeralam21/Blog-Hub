@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "To Fill the Whole Universe",
-      "content": "He who descended is the very one who ascended higher than all the Universe, in order to fill the whole Universe",
+      "content": "He who descended is the very one who ascended higher than all the Universe, in order to fill the whole Universe On the whole, a problem is a thing regarded as difficult to understand or to deal with. Is there anything difficult to understand or to deal with? What sort of a thing which can be classed as difficult to understand or to deal with? First of all, let me clarify what the word difficult so-called means. Difficult so-called means: not easy, needing effort or skill to do or to understand. Such a definition truly leads all human beings astray. If carrying out or to understand a particular thing requires effort or skill, verily it is a truth, and what is the matter? Answer this question before reading further. ",
       "author": "Peyton Jones Paul"
     },
     {
@@ -23,6 +23,71 @@
       "title": "To Fill the Whole Universe",
       "content": "He who descended is the very one who ascended higher than all the Universe, in order to fill the whole Universe",
       "author": "Peyton Jones Paul"
+    },
+    {
+      "title": "fdfhdh",
+      "content": "hdfdfdfdfdfdfdfdfdf",
+      "author": "fdddddd",
+      "id": 5
+    },
+    {
+      "title": "First Blog",
+      "content": "This is the first blog added",
+      "author": "John",
+      "id": 6
+    },
+    {
+      "title": "Blog-12",
+      "content": "This the 12th blog",
+      "author": "Kennedy",
+      "id": 7
+    },
+    {
+      "title": "Blog-13",
+      "content": "This the 13th blog",
+      "author": "Kenny",
+      "id": 8
+    },
+    {
+      "title": "Blog-14",
+      "content": "asdfklllllllllllllllllllmxnfdueahfoamefvdsagvb",
+      "author": "rgfuhrg",
+      "id": 9
+    },
+    {
+      "title": "New Blog name",
+      "content": "On the whole, a problem is a thing regarded as difficult to understand or to deal with. Is there anything difficult to understand or to deal with? What sort of a thing which can be classed as difficult to understand or to deal with? First of all, let me clarify what the word difficult so-called means. Difficult so-called means: not easy, needing effort or skill to do or to understand. Such a definition truly leads all human beings astray. If carrying out or to understand a particular thing requires effort or skill, verily it is a truth, and what is the matter? Answer this question before reading further. ",
+      "author": "Tauqeer",
+      "id": 10
+    },
+    {
+      "title": "Blog 15",
+      "content": "some texts",
+      "author": "Alam",
+      "id": 11
+    },
+    {
+      "title": "Blog 16",
+      "content": "some texts",
+      "author": "Yogesh",
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "tauqeer@gmail.com",
+      "password": "tauqeer123"
+    },
+    {
+      "id": 2,
+      "username": "krunal@gmail.com",
+      "password": "krunal123"
+    },
+    {
+      "id": 3,
+      "username": "yogesh@gmmail.com",
+      "password": "yogesh123"
     }
   ]
 }
