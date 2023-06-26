@@ -1,53 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="icon" type="image/x-icon" href="/images/my-icon.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <style>.blog {
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 3px solid #ccc;
-        background-color: #f9f9f9;
-        margin-left: 40px;
-        margin-right: 40px;
-      }
-      .blog h2 {
-        font-size: 20px;
-        color: #333;
-      }
-      .blog p {
-        font-size: 16px;
-        color: #555;
-      }
-      .blog .author {
-        font-style: italic;
-        color: #888;
-      }</style>
-</head>
-<body>
-  <nav class="navbar" id="navbar">
-    <div class="navdiv">
-        <h4 class="logo">About me</h4>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#Certifications">Certifications</a></li>
+    <link rel="icon" type="image/x-icon" href="/images/my-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="abc">
+      <nav>
+        <h2>Blog Junction</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="addblog.html">Add Blog</a></li>
+          <li><a onclick="logout()">Logout</a></li>
         </ul>
-        <button a href="https://www.linkedin.com/in/md-tauqeer-alam-896539168/" class="connect">LinkedIn</button>
-    </div>
-</nav>
+      </nav>
+      <div id="myDiv">
+        <div id="myDiv1"></div>
 
-    <div id="myBlog" class="blog">
-      <h2 id="blogTitle">Blog Title 1</h2>
-      <p id="blogBody">Blog content goes here...</p>
-      <p id ="blogAuthor" class="author">Author: John Doe</p>
+        <div id="blogBody">
+          <h1>Blog</h1>
+
+          <h3 id="blogTitle">Title</h3>
+          <div id="blogDetails">hello</div>
+          <h3 id="blogAuthor">Author</h3>
+          <button onclick="deleteBlog()">Delete</button>
+        </div>
+      </div>
+      <script src="blog.js"></script>
     </div>
-    
-</body>
+  </body>
 </html>

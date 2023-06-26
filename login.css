@@ -1,146 +1,177 @@
-body
-{
-    background-image: url("/images/david-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    margin: 0px;
-}
-.add-body{
-    background-image: url("/images/book-open.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-}
-.login{
-        width: 30%;
-        overflow: hidden;
-        margin: auto;
-        margin: 20 0 0 450px;
-        padding: 40px;
-        border-radius: 15px ;
-        border: 2px solid red;
-        box-shadow: 10px 10px 10px 5px darkred;
-
-}
-h2{
-    
-    text-align: center;
-    color: #fcf3f3;
-    text-shadow: 4px 4px rgb(122, 105, 104);
-    font-size: 30px;
-    font-style: italic;
-    font-family:cursive;
-    margin-left: 400px;
-}
-label{
-    color: #d0ece5;
-    font-size: 17px;
-    font-family: cursive;
-}
-#username,#password{
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 3px;
-    padding-left: 8px;
-    font-family: cursive;
-}
-.connect{
-    background-color: rgb(246, 246, 250);
-    color:rgb(24, 23, 23);
-    border-radius: 3px;
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 2px grey ;
+#mainDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
-#log{
-    width: 60%;
-    padding: 10px;
-    background-color: #da0707;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 4px 4px 4px grey;
-    font-size: 20px;
-    margin-left: 17%;
+.login {
+  background-color: rgb(183, 206, 226);
+  width: 25%;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 10px;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid red;
+  box-shadow: 10px 10px 10px 5px darkred;
+
+}
+#add-section{
+  background-color: rgb(183, 206, 226);
+  width: 80%;
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 35px;
+  border-radius: 15px;
+  border: 2px solid red;
+  box-shadow: 10px 10px 10px 5px darkred;
+}
+#heading{
+  font-size: 50px;
+  margin: 0px;
 }
 
-#log:active{
-    background-color: rgb(17, 17, 54);
+h2 {
+
+  text-align: center;
+  color: #ec1616;
+  text-shadow: 2px 2px rgb(122, 105, 104);
+  font-size: 30px;
+  font-style: italic;
+  font-family: cursive;
+  margin-left: 40px;
+  display: inline;
 }
 
-a{
-    float: right;
-    background-color: grey;
+label {
+  color: #2c4e46;
+  font-size: 17px;
+  font-family: cursive;
 }
-/* label{
-    color: white;
-} 
- Blog Page */
 
-#title, #content{
-        width: 100%;
-        border: none;
-        border-radius: 5px;
-        padding-left: 8px;
-        font-family: cursive;
-    
-    }
-    #title{
-        height: 45px;
-    }
+#regH{
+  margin: 2px;
+}
 
-    #addblog{
-    width: 60%;
-    height: 35px;
-    border: none;
-    border-radius: 8px;
-    background-color: #da0707;
-    color: white;
-    box-shadow: 4px 4px 4px grey;
-    margin-left: 20%;
-    font-size: 100%;
-    cursor: pointer;
-    }
+#username,
+#password,#name,#email,#mypassword {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+  font-family: cursive;
+}
 
-    #addblog:active{
-        background-color: darkred;
-    }
+.connect {
+  background-color: rgb(246, 246, 250);
+  color: rgb(24, 23, 23);
+  border-radius: 3px;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px grey;
+}
 
-    #add-section{
-        width:40%;
-    }
+#log {
+  width: 60%;
+  padding: 10px;
+  background-color: #da0707;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px grey;
+  font-size: 20px;
+  margin-left: 17%;
+}
 
-    /* ================================================================================== */
-    .navbar{
-        background: crimson;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    .navdiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    }
-    .logo{
-        font-size: 35px;
-        font-weight: 600;
-        color: white;
-    }
-    li{
-        list-style: none;
-        display: inline-block;
-    }
-    li a{
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        margin-right: 25px;
-        border-radius: 10px;
-        padding: 5px;
-    }
+#log:active {
+  background-color: rgb(17, 17, 54);
+}
+
+
+
+#title,
+#content {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 8px;
+  font-family: cursive;
+
+}
+
+#title {
+  height: 45px;
+}
+
+#addblog {
+  width: 60%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #da0707;
+  color: white;
+  box-shadow: 4px 4px 4px grey;
+  margin-left: 20%;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+#addblog:active {
+  background-color: darkred;
+}
+
+
+/* ================================================================================== */
+
+
+nav {
+  position: sticky;
+  width: 100%;
+  height: 70px;
+  background-color: #0005;
+  line-height: 50px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.7s all;
+}
+
+nav ul li:hover {
+  background-color: #088;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 30px;
+}
+
+#container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+img{
+  width: 45%;
+  margin: 2px;
+}
+
+#register{
+  width: 80%;
+}
+
+
+  

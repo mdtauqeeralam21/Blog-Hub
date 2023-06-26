@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Blog</title>
-    <link rel="icon" type="image/x-icon" href="/images/my-icon.png">
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="icon" type="image/x-icon" href="/images/my-icon.png" />
+    <link rel="stylesheet" type="text/css" href="login.css" />
     <script src="script.js"></script>
-</head>
-<body class="add-body">
-    <nav class="navbar" id="navbar">
-        <div class="navdiv">
-            <h2><u>Add your blog to Blog-Junction</u></h2>
-            <button a href="index.html" class="connect">Home</button>
+  </head>
+
+  <body class="add-body">
+    <div id="mainDiv">
+      <nav>
+        <h2>Blog Junction</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="addblog.html">Add Blog</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+      <div id="container">
+        <img src="/images/blog-post-animate.svg" alt="blog" />
+        <div id="register">
+          <h2 id="heading">Hello User</h2>
+          <div class="saveBlog" id="add-section">
+            <form id="myForm">
+              <label><b>Title: </b> </label><br />
+              <input
+                type="text"
+                id="title"
+                placeholder="Enter title"
+                required
+              />
+              <br /><br />
+              <label><b>Content: </b> </label><br />
+              <textarea
+                id="content"
+                placeholder="Enter text"
+                rows="8"
+                cols="50"
+              ></textarea>
+              <br /><br />
+              <button type="submit" id="addblog" onclick="addBlogs()">
+                ADD
+              </button>
+              <br /><br />
+            </form>
+          </div>
         </div>
-    </nav>
-    <br>
-    <div class="login" id="add-section">
-    <form id="myForm">
-        <label><b>Title:
-        </b>
-        </label><br>
-        <input type="text" id="title" placeholder="Enter title" required>
-        <br><br>
-        <label><b>Content:
-        </b>
-        </label><br/>
-        <textarea id="content"  placeholder="Enter text" rows="8" cols="50"></textarea>
-        <br/><br/>
-        <!-- <label><b>Author:
-        </b>
-        </label><br/>
-        <input type="text" id="author" placeholder="Author name" required>
-        <br><br> -->
-        <button type="submit" id="addblog" onclick="addBlogs()">ADD</button>
-        <br><br>
-    </form>
-</div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>

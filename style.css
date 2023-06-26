@@ -1,124 +1,142 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-  }
-  
-  header {
-    background: #80CBC4;
-    height: 15vh;
-  }
-  
-  main {
-    display: flex;
-    height: 100%;
-  }
-  
-  #sideNav{
-    flex: 1;
-    background-image: url("/images/pen-book-pen.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-  }
-  
-  article {
-    flex: 3;
-    background: white;
-  }
-  
-  aside {
-    flex: 2;
-    background-image: url("/images/pen-book-pen.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-  }
-  
-  footer {
-    background: #34bdaf;
-    height: 20vh;
-  }
-  
-  header,
-  footer,
-  article,
-  #sideNav,
-  aside {
-    padding: 1em;
-  }
-
-
-  /* #navbar {
-    overflow:hidden;
-    background-color: #cf4b4b;
-    height: 100px;
-  }
-  #navbar a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px;
-  } */
-
-  /* .content {
-    padding: 16px;
-  }
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .sticky + .content {
-    padding-top: 60px;
-  } */
-  
-
-  #refLink{
-    font: italic small-caps bold 12px/30px Georgia, serif;
-    margin-right: 2px;
-    
-  }
-  
-  #authorName{
-    float: right;
-    font: italic small-caps bold 12px/30px Georgia, serif;
-  }
-
-
-  .navbar{
-    background: crimson;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-right: 15px;
-    padding-left: 15px;
+  box-sizing: border-box;
 }
-.navdiv{
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 70px;
+
+#abc {
+  
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+
+  /* background-image: url("/images/david-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+
 }
-.logo{
-    font-size: 35px;
-    font-weight: 600;
-    color: white;
+
+h2 {
+
+  text-align: center;
+  color: #fcf3f3;
+  text-shadow: 4px 4px rgb(122, 105, 104);
+  font-size: 30px;
+  font-style: italic;
+  font-family: cursive;
+  margin-left: 40px;
+  display: inline;
 }
-li{
-    list-style: none;
-    display: inline-block;
+
+#heading{
+  font-size: 30px;
+  margin: auto;
 }
-li a{
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 25px;
-    border-radius: 10px;
-    padding: 5px;
+
+.bloglist {
+  float: right; 
+  width: 65%;
+  height: 90%;
+  overflow:hidden;
+  justify-content: center;
+  margin:0px;
+  padding: 30px;
+
+  background-image: url("/images/david-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+#table{
+  width: 80%;
+  margin-top: 30px;
+}
+
+#refLink {
+  font: italic small-caps bold 18px/30px Caprasimo, cursive;
+  color: antiquewhite;
+  margin-left: 8px;
+
+}
+
+#authorName {
+  font: italic normal bold 18px/30px Caprasimo, cursive;
+  color: white;
+  margin-left: 8px;
+
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(14, 12, 12, 0.904);
+  line-height: 45px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.7s all;
+}
+
+nav ul li:hover {
+  background-color: #088;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 30px;
+}
+
+
+#myDiv{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+#myDiv1{
+  flex:1;
+  background-image: url("/images/blog-post-animate.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#blogBody{
+  flex: 2;
+  background-color: rgb(51, 30, 51);
+  padding: 10px 20px 10px 25px;
+  color: #fff;
+}
+
+#blogTitle,#title{
+  font-style: italic;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: larger;
+  color: aqua;
+  font-size: x-large;
+}
+#blogAuthor,#author{
+  font-style: italic;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: larger;
+  color: rgb(248, 191, 116);
+  font-size: x-large;
+}
+#blogDetails{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+  width: 30%;
 }

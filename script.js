@@ -9,12 +9,14 @@ async function login() {
       const response = await fetch(`http://localhost:2222/users`)
       const data = await response.json();
       console.log(data);
-      const matcheduser = data.find(user => user.username === username && user.password === password);
+      const matcheduser = data.find(user => user.email === username && user.password === password);
       if (matcheduser) {
-          sessionStorage.setItem("user", JSON.stringify(matcheduser));
-
+        const result = data.find( name => name.email === username );
+        console.log(result);
+        console.log(result.name);
+          sessionStorage.setItem("user", result.name);
           sessionStorage.setItem("islogin", "true");
-
+        alert('Login Successfull')
           window.location.href = "index.html";
       }
 
@@ -38,7 +40,7 @@ function addBlogs(){
       event.preventDefault();
       const title=document.getElementById('title').value;
       const content=document.getElementById('content').value;
-      const author=document.getElementById('author').value;
+      const author=sessionStorage.getItem('user');
 
       const blog={
           title:title,
@@ -55,75 +57,105 @@ function addBlogs(){
           body:JSON.stringify(blog)
       })
       .then(response => response.json())
-      .then(responseblog =>{
-          console.log('Registered successfully');
-          window.location.href='index.html'
+      .then( () =>{
+          console.log('Added successfully');
+          window.location.href='index.html',true;
       });
   });
 }
 //===================================================================================
-fetch('http://localhost:2222/blogs')
-  .then(response=> {
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-    appendData(data);
-  })
-  .catch(err=> {
-    console.log(err);
+function registerUser(){
+  document.getElementById('login').addEventListener('submit',function(event){
+      event.preventDefault();
+      const name=document.getElementById('name').value;
+      const email=document.getElementById('email').value;
+      const pass=document.getElementById('mypassword').value;
+
+      const user={
+          name:name,
+          email:email,
+          password:pass
+      };
+
+
+      fetch("http://localhost:2222/users",{
+          method:'post',
+          headers:{
+              'content-Type':'application/json'
+          },
+          body:JSON.stringify(user)
+      })
+      .then(response => response.json())
+          console.log('Registered successfully');
+          alert('Registered Successfull');
+          window.location.href='login.html',true;
   });
-    
+}
 
-  function appendData(data){
-    let mainContainer = document.getElementById("table-data");
-    
-    for (let i=0;i<data.length; i++) {
-      // let ind=i+1;
-      // let index=ind.toString();
-      let div = document.createElement("a");
 
-      div.setAttribute('href','blog.html');
-     div.setAttribute("id","refLink")
-     // div.setAttribute('value',index);
-      //div.addEventListener('click','showBlog()');
-      let div2 = document.createElement("div");
-      div2.setAttribute('id','authorName')
-      console.log(data[i].title);
-      div.innerHTML = (i+1)+'. Title: ' + data[i].title+'<br/>'; 
-      mainContainer.appendChild(div);
-      div2.innerHTML= data[i].author+'<br/>';;
-      mainContainer.appendChild(div2);
-      
-    }
-    
-  }
+
+
 
   //=====================================================================
-  
- // let val=document.getElementById('refLink').value;
-  fetch('http://localhost:2222/blogs/1')
-  .then(response=> {
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-    showBlog(data);
-    
-  })
-  .catch(err=> {
-    console.log(err);
+
+  document.addEventListener("DOMContentLoaded",function (){
+    fetch('http://localhost:2222/blogs')
+    .then(response=>response.json())
+    .then(data=>{
+      const blogList=document.getElementById('title');
+      const blogAuthor=document.getElementById('author');
+
+      if(sessionStorage.getItem('islogin')){
+      const liveUser=document.getElementById('heading');
+
+      let blogger=sessionStorage.getItem("user");
+      liveUser.textContent='Hello, '+blogger;
+      console.log('user is '+ sessionStorage.getItem("user"));
+      }else{
+        console.log('Please Login');
+      }
+      //create the blog list
+      data.forEach(blog => {
+        const listItem=document.createElement('ul');
+        const listItem2=document.createElement('ul');
+
+        listItem.textContent=blog.title;
+        listItem2.textContent=blog.author;
+
+        blogList.appendChild(listItem);
+        blogAuthor.appendChild(listItem2);
+
+
+        //Attach event listener
+        listItem.addEventListener("click",function(){
+          sessionStorage.setItem('blogId',blog.id);
+          sessionStorage.setItem('blogTitle',blog.title);
+          sessionStorage.setItem('blogContent',blog.content);
+          sessionStorage.setItem('blogAuthor', blog.author);
+          window.location.href='blog.html';
+          
+        });
+        
+      });
+    });
   });
 
-  function showBlog(data){
+//========================================================================
+function logout(){
+  
+  sessionStorage.clear();
+  console.log('logged out');
+  window.location.href=('login.html');
+  
+}
 
-    let div3= document.getElementById("blogTitle");
-    let div4=document.getElementById("blogBody");
-    let div5=document.getElementById("blogAuthor");
-    console.log(data.title);
-    div3.innerHTML = data.title;
-    div4.innerHTML = data.content;
-    div5.innerHTML = data.author;
-    
+function addingBlog(){
+  if(sessionStorage.getItem('islogin')){
+      const liveUser=document.getElementById('heading');
 
+      let blogger=sessionStorage.getItem("user").split('@');
+      liveUser.textContent='Hello, '+blogger[0].slice(1);
+      console.log('user is'+ sessionStorage.getItem("user"));
+
+      }
   }
